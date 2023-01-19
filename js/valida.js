@@ -1,10 +1,13 @@
 export function valida (input) {
     const tipoInput = input.dataset.tipo;
-    console.log(tiposInput);
+
+    if(tiposInput[tipoInput]) {
+        tiposInput[tipoInput](input);
+    }
 }
 
 const tiposInput = {
-    dataNascimento: verificaIdade(input)
+    dataNascimento: input => verificaIdade(input)
 }
 
 function verificaIdade (input) {
